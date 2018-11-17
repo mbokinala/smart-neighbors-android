@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/titleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dinner @ the Park"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/categoryView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/titleView"
+        android:layout_alignBaseline="@id/titleView"
+        android:text="Carpool"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"/>
+    
+    <TextView
+        android:id="@+id/dateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date:"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/titleView"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10/21/2018 10:00 AM"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/dateTitle"
+        android:layout_alignBaseline="@+id/dateTitle"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"/>
+
+    <TextView
+        android:id="@+id/placeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place:"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/dateTitle"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/placeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="East Branch Park"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/placeTitle"
+        android:layout_alignBaseline="@+id/placeTitle"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"/>
+
+    <TextView
+        android:id="@+id/neighborTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Person:"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/placeView"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/neighborView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Andy Anteater"
+        android:layout_toRightOf="@+id/neighborTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@+id/neighborTitle"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+    <TextView
+        android:id="@+id/statusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/neighborView"
+        android:layout_alignBaseline="@+id/neighborView"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/statusView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unconfirmed"
+        android:layout_toRightOf="@+id/statusTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@+id/statusTitle"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+
+
+</RelativeLayout>

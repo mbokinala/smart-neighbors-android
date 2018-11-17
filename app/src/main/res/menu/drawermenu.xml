@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeMenuItem"
+        android:title="Home"
+        android:icon="@drawable/home_icon" />
+    <item
+        android:id="@+id/byMeMenuIem"
+        android:title="By Me"
+        android:icon="@drawable/by_me_icon"/>
+    <item
+        android:id="@+id/byNeighborsMenuItem"
+        android:title="By Neighbors"
+        android:icon="@drawable/by_neighbors_icon"/>
+
+    <item
+        android:id="@+id/requestNewMenuItem"
+        android:title="Request new"
+        android:icon="@drawable/request_new_icon"/>
+    <item
+        android:id="@+id/confirmedMenuItem"
+        android:title="Confirmed"
+        android:icon="@drawable/confirmed_icon"/>
+    <item
+        android:id="@+id/logoutMenuItem"
+        android:title="Log Out"
+        android:icon="@drawable/logout_icon"/>
+
+</menu>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "867734412147",
+    "firebase_url": "https://smartneighbors-2344c.firebaseio.com",
+    "project_id": "smartneighbors-2344c",
+    "storage_bucket": "smartneighbors-2344c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867734412147:android:6fd980fb9921f065",
+        "android_client_info": {
+          "package_name": "com.mbokinala.smartneighbors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867734412147-c2bg6qdceecpmo67dmuf5m25et7lps4n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mbokinala.smartneighbors",
+            "certificate_hash": "d3b26daaadf4ace08da59799e928fe6276a30c23"
+          }
+        },
+        {
+          "client_id": "867734412147-hmhhof5ro42uime40mnilq6a581fl1qv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3yp5s8IhrytL0bIdSTVzTlbE9KHkCceU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867734412147-hmhhof5ro42uime40mnilq6a581fl1qv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
