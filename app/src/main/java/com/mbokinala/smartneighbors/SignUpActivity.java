@@ -1,10 +1,12 @@
 package com.mbokinala.smartneighbors;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
@@ -53,7 +55,12 @@ public class SignUpActivity extends GetInstanceAppCompatActvity {
                     Log.d("LoginReq", "No Error");
                     final ScrollView scroller = findViewById(R.id.scroller);
                     scroller.removeAllViews();
-                    scroller.addView(new ProgressBar(getApplicationContext()));
+
+                    LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    View row = inflater.inflate(R.layout.loading, scroller, false);
+                    scroller.removeAllViews();
+
+
                     ScrollView buttonView = findViewById(R.id.buttonView);
                     buttonView.removeAllViews();
 

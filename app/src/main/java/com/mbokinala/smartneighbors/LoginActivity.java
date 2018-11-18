@@ -38,7 +38,7 @@ public class LoginActivity extends GetInstanceAppCompatActvity {
 
         if (getIntent().hasExtra("email")) {
             emailView.setText(getIntent().getExtras().getString("email"));
-            Log.d("LoginReq", "Should toast");
+            Log.d("AppLogs", "Should toast");
             Toast.makeText(getApplicationContext(), "Successfully Signed up", Toast.LENGTH_SHORT).show();
         }
 
@@ -69,7 +69,7 @@ public class LoginActivity extends GetInstanceAppCompatActvity {
         final Map<String, String> fields = getFields();
         JSONObject jsonBody = new JSONObject(fields);
 
-        Log.d("LoginReq", fields.get("password"));
+        Log.d("AppLogs", fields.get("password"));
 
         ConstraintLayout loginView = findViewById(R.id.loginView);
         loginView.removeAllViewsInLayout();
@@ -85,21 +85,21 @@ public class LoginActivity extends GetInstanceAppCompatActvity {
         set.connect(bar.getId(), ConstraintSet.START, loginView.getId(), ConstraintSet.START, 8);
         set.connect(bar.getId(), ConstraintSet.END, loginView.getId(), ConstraintSet.END, 8);
 
-        JsonObjectRequest loginRequest = new JsonObjectRequest(Request.Method.POST, getResources().getString(R.string.api_url) + "/users/login", jsonBody,
+        JsonObjectRequest AppLogsuest = new JsonObjectRequest(Request.Method.POST, getResources().getString(R.string.api_url) + "/users/login", jsonBody,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            Log.d("LoginReq", "response.get(status) = " + response.get("status"));
+                            Log.d("AppLogs", "response.get(status) = " + response.get("status"));
                             if (response.get("status").equals("success")) {
                                 SaveSharedPreference.setID(getApplicationContext(), String.valueOf(response.get("id")));
-                                Log.d("LoginReq", String.valueOf(response.get("id")));
+                                Log.d("AppLogs", String.valueOf(response.get("id")));
                                 SaveSharedPreference.setName(getApplicationContext(), String.valueOf(response.get("name")));
                                 SaveSharedPreference.setEmail(getApplicationContext(), String.valueOf(response.get("email")));
 
                                 finish();
                             } else {
-                                Log.d("LoginReq", "Invalid");
+                                Log.d("AppLogs", "Invalid");
                                 Toast.makeText(getApplicationContext(), "Invalid credentials", Toast.LENGTH_SHORT).show();
                                 Thread thread = new Thread() {
                                     public void run() {
@@ -122,15 +122,15 @@ public class LoginActivity extends GetInstanceAppCompatActvity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.d("LoginReq", "Error: " + error.getMessage());
+                        Log.d("AppLogs", "Error: " + error.getMessage());
                     }
                 }
         );
 
-        loginRequest.setShouldCache(false);
-        loginRequest.setRetryPolicy(new DefaultRetryPolicy(60000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        AppLogsuest.setShouldCache(false);
+        AppLogsuest.setRetryPolicy(new DefaultRetryPolicy(60000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
-        Volley.newRequestQueue(getApplicationContext()).add(loginRequest);
+        Volley.newRequestQueue(getApplicationContext()).add(AppLogsuest);
     }
 
     private Map<String, String> getFields() {

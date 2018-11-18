@@ -56,14 +56,83 @@
                 tools:layout_editor_absoluteX="53dp"
                 tools:layout_editor_absoluteY="122dp" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Category"
+                android:text="Category:"
                 android:textAppearance="@style/FormLabel"
                 tools:layout_editor_absoluteX="76dp"
                 tools:layout_editor_absoluteY="279dp" />
+
+            <Spinner
+                android:id="@+id/categorySelectView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/categories" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Place:"
+                android:textAppearance="@style/FormLabel" />
+
+            <EditText
+                android:id="@+id/placeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Place"
+                android:inputType="textPersonName" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date/Time:"
+                android:textAppearance="@style/FormLabel" />
+
+            <EditText
+                android:id="@+id/dateTimeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Date/Time"
+                android:inputType="datetime" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notes:"
+                android:textAppearance="@style/FormLabel" />
+
+            <EditText
+                android:id="@+id/notesView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Notes"
+                android:inputType="textMultiLine"
+                android:lines="5" />
+
         </LinearLayout>
     </ScrollView>
 

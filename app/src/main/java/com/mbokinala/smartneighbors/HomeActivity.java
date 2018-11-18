@@ -41,7 +41,7 @@ public class HomeActivity extends GetInstanceAppCompatActvity {
     }
 
     private void configButtons() {
-        Button byMeButton = (Button) findViewById(R.id.byMeButton);
+        Button byMeButton = findViewById(R.id.byMeButton);
         byMeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +49,15 @@ public class HomeActivity extends GetInstanceAppCompatActvity {
             }
         });
 
-        Button byNeighborsButton = (Button) findViewById(R.id.byNeighborsButton);
+        Button newEventButton = findViewById(R.id.createEventButton);
+        newEventButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, NewEventActivity.class));
+            }
+        });
+
+        Button byNeighborsButton = findViewById(R.id.byNeighborsButton);
         byNeighborsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +74,7 @@ public class HomeActivity extends GetInstanceAppCompatActvity {
     @Override
     public void recheckLogin() {
         if(SaveSharedPreference.getID(getApplicationContext()).length() == 0) {
+            Log.d("AppLogs", "Rerouting to Login");
             Intent myIntent = new Intent(this, LoginActivity.class);
             startActivity(myIntent);
         } else {
