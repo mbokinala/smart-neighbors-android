@@ -1,12 +1,14 @@
 package com.mbokinala.smartneighbors;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -72,18 +74,11 @@ public class LoginActivity extends GetInstanceAppCompatActvity {
         Log.d("AppLogs", fields.get("password"));
 
         ConstraintLayout loginView = findViewById(R.id.loginView);
+        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View row = inflater.inflate(R.layout.loading, loginView, false);
         loginView.removeAllViewsInLayout();
-        ConstraintSet set = new ConstraintSet();
+        loginView.addView(row);
 
-        ProgressBar bar = new ProgressBar(getApplicationContext());
-        bar.setId(View.generateViewId());
-
-        loginView.addView(bar, 0);
-        set.clone(loginView);
-        set.connect(bar.getId(), ConstraintSet.TOP, loginView.getId(), ConstraintSet.TOP, 8);
-        set.connect(bar.getId(), ConstraintSet.BOTTOM, loginView.getId(), ConstraintSet.BOTTOM, 8);
-        set.connect(bar.getId(), ConstraintSet.START, loginView.getId(), ConstraintSet.START, 8);
-        set.connect(bar.getId(), ConstraintSet.END, loginView.getId(), ConstraintSet.END, 8);
 
         JsonObjectRequest AppLogsuest = new JsonObjectRequest(Request.Method.POST, getResources().getString(R.string.api_url) + "/users/login", jsonBody,
                 new Response.Listener<JSONObject>() {

@@ -47,7 +47,7 @@
                 tools:layout_editor_absoluteY="279dp" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/eventNameView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
