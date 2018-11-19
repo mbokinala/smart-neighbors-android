@@ -28,6 +28,8 @@ public class HomeActivity extends GetInstanceAppCompatActvity {
         setContentView(R.layout.activity_home);
         configButtons();
 
+        getSupportActionBar().setTitle("Smart Moves");
+
         mDrawerLayout = findViewById(R.id.drawer);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);

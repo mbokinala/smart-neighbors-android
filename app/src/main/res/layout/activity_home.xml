@@ -13,66 +13,64 @@
 
         <Button
             android:id="@+id/byMeButton"
-            android:layout_width="wrap_content"
+            style="@style/CustomButton"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="36dp"
-            android:layout_marginEnd="8dp"
             android:text="By Me"
+            app:layout_constraintBottom_toTopOf="@+id/byNeighborsButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/byNeighborsButton"
-            android:layout_width="wrap_content"
+            style="@style/CustomButton"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="36dp"
-            android:layout_marginEnd="8dp"
             android:text="By Neighbors "
+            app:layout_constraintBottom_toTopOf="@+id/confirmedButtons"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/byMeButton" />
 
         <Button
             android:id="@+id/confirmedButtons"
-            android:layout_width="wrap_content"
+            style="@style/CustomButton"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="36dp"
-            android:layout_marginEnd="8dp"
-            android:text="Confirmed"
+            android:text="Upcoming"
+            app:layout_constraintBottom_toTopOf="@+id/createEventButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/byNeighborsButton" />
 
         <Button
             android:id="@+id/createEventButton"
-            android:layout_width="wrap_content"
+            style="@style/CustomButton"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="36dp"
-            android:text="Create New Event"
+            android:text="Create New"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/confirmedButtons" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            android:text="Smart Moves..."
-            android:textAlignment="center"
-            android:textSize="36sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.NavigationView

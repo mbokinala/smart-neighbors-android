@@ -54,7 +54,7 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/placeView"
+        android:id="@+id/placeFieldView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="East Branch Park"
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:text="Person:"
         android:layout_marginLeft="10dp"
-        android:layout_below="@+id/placeView"
+        android:layout_below="@+id/placeFieldView"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         android:textStyle="bold"/>
 

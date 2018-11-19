@@ -29,8 +29,8 @@
             android:name=".LoginActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".SignUpLoadingActivity" />
-        <activity android:name=".NewEventActivity"></activity>
+        <activity android:name=".NewEventActivity" />
+        <activity android:name=".ByNeighborsActivity"></activity>
     </application>
 
 </manifest>

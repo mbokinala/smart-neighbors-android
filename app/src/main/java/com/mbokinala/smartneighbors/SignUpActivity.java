@@ -58,7 +58,6 @@ public class SignUpActivity extends GetInstanceAppCompatActvity {
 
                     LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                     View row = inflater.inflate(R.layout.loading, scroller, false);
-                    scroller.removeAllViews();
                     scroller.addView(row);
 
 

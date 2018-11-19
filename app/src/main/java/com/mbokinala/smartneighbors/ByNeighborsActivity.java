@@ -2,8 +2,9 @@ package com.mbokinala.smartneighbors;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +25,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class ByMeActivity extends GetInstanceAppCompatActvity {
+public class ByNeighborsActivity extends AppCompatActivity {
 
     ListView list;
     EventAdapter adapter;
@@ -38,7 +39,7 @@ public class ByMeActivity extends GetInstanceAppCompatActvity {
         list = findViewById(R.id.byMeListView);
         refreshLayout = findViewById(R.id.swipeRefreshLayout);
 
-        adapter = new EventAdapter(this);
+        adapter = new ByNeighborsActivity.EventAdapter(this);
         list.setAdapter(adapter);
 
         reload();
@@ -54,7 +55,7 @@ public class ByMeActivity extends GetInstanceAppCompatActvity {
 
     //Refreshes data from RESTful service
     public void reload() {
-        String url = getResources().getString(R.string.api_url) + "/events/by/" + SaveSharedPreference.getID(getApplicationContext());
+        String url = getResources().getString(R.string.api_url) + "/events/byNeighbors/" + SaveSharedPreference.getID(getApplicationContext());
 
         JsonArrayRequest request;
         request = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {

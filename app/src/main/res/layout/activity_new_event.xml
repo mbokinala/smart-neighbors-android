@@ -20,12 +20,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:id="@+id/scroller"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -35,7 +36,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView10"
@@ -70,7 +71,7 @@
                 tools:layout_editor_absoluteY="279dp" />
 
             <Spinner
-                android:id="@+id/categorySelectView"
+                android:id="@+id/categorySpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/categories" />
@@ -87,7 +88,7 @@
                 android:textAppearance="@style/FormLabel" />
 
             <EditText
-                android:id="@+id/placeView"
+                android:id="@+id/placeFieldView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -131,7 +132,13 @@
                 android:ems="10"
                 android:hint="Notes"
                 android:inputType="textMultiLine"
-                android:lines="5" />
+                android:lines="2" />
+
+            <Button
+                android:id="@+id/createEventButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create" />
 
         </LinearLayout>
     </ScrollView>
